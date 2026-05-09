@@ -528,8 +528,9 @@ export default function HomePage() {
               </div>
             </div>
             <div className="chart-shell chart-shell-recharts" ref={chartContainerRef}>
-              <ResponsiveContainer width="100%" height="100%">
-                <ComposedChart data={chartWindow.points} margin={{ top: 16, right: 28, left: 4, bottom: 12 }}>
+              {typeof window !== "undefined" && (
+                <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
+                  <ComposedChart data={chartWindow.points} margin={{ top: 16, right: 28, left: 4, bottom: 12 }}>
                   <defs>
                     <linearGradient id="currentArea" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#62f2ff" stopOpacity={0.28} />
@@ -619,6 +620,7 @@ export default function HomePage() {
                   />
                 </ComposedChart>
               </ResponsiveContainer>
+              )}
               <div className="chart-hint">{chartSummaryText}</div>
             </div>
           </article>
