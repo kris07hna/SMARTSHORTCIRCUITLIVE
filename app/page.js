@@ -19,11 +19,8 @@ import {
 } from "recharts";
 
 const CONFIG = {
-  databaseUrl:
-    process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL ||
-    "https://smart-circuit-monitor-default-rtdb.asia-southeast1.firebasedatabase.app",
-  devicePath:
-    process.env.NEXT_PUBLIC_FIREBASE_DEVICE_PATH || "devices/esp32-s3-devkitm-1/ina219",
+  databaseUrl: "https://smart-circuit-monitor-default-rtdb.asia-southeast1.firebasedatabase.app",
+  devicePath: "devices/esp32-s3-devkitm-1/ina219",
   pollMs: Number(process.env.NEXT_PUBLIC_POLL_MS || 2000),
   historyLimit: Number(process.env.NEXT_PUBLIC_HISTORY_LIMIT || 180),
   shortThresholdMA: Number(process.env.NEXT_PUBLIC_SHORT_THRESHOLD_MA || 10),
