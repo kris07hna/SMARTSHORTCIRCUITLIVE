@@ -5,10 +5,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "env": {
-    "NEXT_PUBLIC_FIREBASE_DATABASE_URL": "@firebase_database_url",
-    "NEXT_PUBLIC_FIREBASE_DEVICE_PATH": "@firebase_device_path",
-    "NEXT_PUBLIC_POLL_MS": "@poll_ms",
-    "NEXT_PUBLIC_HISTORY_LIMIT": "@history_limit",
-    "NEXT_PUBLIC_SHORT_THRESHOLD_MA": "@short_threshold"
+    "NEXT_PUBLIC_POLL_MS": "2000",
+    "NEXT_PUBLIC_HISTORY_LIMIT": "180",
+    "NEXT_PUBLIC_SHORT_THRESHOLD_MA": "10"
   }
 }
